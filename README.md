@@ -1,6 +1,7 @@
 # ADS Assaignment 5 K.D.E Se-2216
 # $\S1.$ BST 
 ## Node 
+
 ``` java
    private Node root;
     public class Node{
@@ -26,6 +27,7 @@ The Node class represents a node in the binary tree and has instance variables k
 Each node has references to its left and right child nodes. The Node class also overrides the toString() method to provide a string representation of the node, displaying its key-value pair.<br/>
 <hr/>
 ## getSize
+
 ``` java
     private int size = 0;
 
@@ -33,9 +35,11 @@ Each node has references to its left and right child nodes. The Node class also 
         return size;
     }
 ```
+<br/>
 Description : return size of the binary search tree
 <hr/>
 ## put
+
 ``` java
     private Node insertNode(Node node, K key, V value){
 
@@ -63,6 +67,7 @@ It compares the key of the current node with the given key and recursively inser
 If the key already exists, it updates the node's value. The put method inserts a key-value pair into the tree by calling insertNode on the root node.<br/>
 <hr/>
 ## get
+
 ``` java 
     private Node getTreeNode(Node node, K key){
         if (root != null || node.key.equals(key)){
@@ -87,6 +92,7 @@ It recursively searches for the node by comparing keys and traversing left or ri
 The get method uses getTreeNode to find the node with the given key and returns its value if found, or null if not found.<br/>
 
 ## delete 
+
 ``` java 
     private Node deleteNode(Node node, K key){
         if (node == null){
@@ -132,6 +138,7 @@ The delete method invokes deleteNode to delete a node with the given key from th
 
 <hr/>
 ## iterator
+
 ``` java 
     private ArrayList<Node> inOrderTraversal(ArrayList list, Node node){
         if (node == null){
