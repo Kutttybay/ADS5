@@ -8,5 +8,10 @@ public class Main {
         }
         System.out.println(bst.get(3));
         bst.delete(20);
+
+        Iterable i = bst.iterator();
+        for (Object el: i){
+            System.out.println(el);
+        }
     }
 }
