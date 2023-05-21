@@ -74,13 +74,24 @@ public class BST<K extends Comparable<K>,V> {
             } else if (node.right == null) {
                 return node.left;
             } else {
-
+                Node minimun_node = findMinimumNode(node);
+                node.key = minimun_node.key;
+                node.value = minimun_node.value;
+                node.right = deleteNode(node.right, minimun_node.key);
             }
         }
+        return node;
     }
 
     public void delete(K key){
         this.root = deleteNode(root, key);
         size--;
+    }
+
+    private Node findMinimumNode(Node node){
+        while (node.left != null){
+            node = node.left;
+        }
+        return node;
     }
 }

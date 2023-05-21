@@ -7,5 +7,6 @@ public class Main {
             bst.put(i, "Value " + i);
         }
         System.out.println(bst.get(3));
+        bst.delete(20);
     }
 }
